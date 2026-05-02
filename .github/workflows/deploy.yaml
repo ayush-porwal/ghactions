@@ -19,7 +19,7 @@ jobs:
       - uses: actions/upload-artifact@v6
         with:
           name: dist
-          path: dist/ghactions/browser
+          path: dist/ghactions/browser/
 
   deploy:
     runs-on: macos-latest
@@ -28,7 +28,7 @@ jobs:
       - uses: actions/download-artifact@v6
         with:
           name: dist
-          path: dist/ghactions/browser
+          path: dist/ghactions/browser/
       - uses: aws-actions/configure-aws-credentials@v6
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
